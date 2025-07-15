@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างการใช้ &lt;title&gt; ใน HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { color: #2d6cdf; }
+        pre { background: #f0f0f0; padding: 16px; border-radius: 6px; overflow-x: auto; }
+        .note { color: #555; margin-top: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>การทำงานของแท็ก &lt;h1&gt; - &lt;h6&gt;</h1>
+    <p>แท็ก <b>&lt;h1&gt;</b> ถึง <b>&lt;h6&gt;</b> ใช้สำหรับสร้างหัวข้อใน HTML โดย <b>&lt;h1&gt;</b> คือหัวข้อใหญ่สุด และ <b>&lt;h6&gt;</b> คือหัวข้อเล็กสุด</p>
+    <h2>ตัวอย่างการแสดงผล</h2>
+    <div style="background:#f0f0f0;padding:20px 16px;border-radius:8px;margin-bottom:24px;">
+        <h1>&lt;h1&gt; หัวข้อใหญ่สุด &lt;/h1&gt;</h1>
+        <h2>&lt;h2&gt; หัวข้อรอง &lt;/h2&gt;</h2>
+        <h3>&lt;h3&gt; หัวข้อระดับ 3 &lt;/h3&gt;</h3>
+        <h4>&lt;h4&gt; หัวข้อระดับ 4 &lt;/h4&gt;</h4>
+        <h5>&lt;h5&gt; หัวข้อระดับ 5 &lt;/h5&gt;</h5>
+        <h6>&lt;h6&gt; หัวข้อเล็กสุด &lt;/h6&gt;</h6>
+    </div>
+    <h2>ตัวอย่างโค้ด</h2>
+    <pre>&lt;h1&gt;หัวข้อใหญ่สุด&lt;/h1&gt;
+&lt;h2&gt;หัวข้อรอง&lt;/h2&gt;
+&lt;h3&gt;หัวข้อระดับ 3&lt;/h3&gt;
+&lt;h4&gt;หัวข้อระดับ 4&lt;/h4&gt;
+&lt;h5&gt;หัวข้อระดับ 5&lt;/h5&gt;
+&lt;h6&gt;หัวข้อเล็กสุด&lt;/h6&gt;
+    </pre>
+    <div class="note">
+        <b>หมายเหตุ:</b> ควรใช้ &lt;h1&gt; เพียง 1 ครั้งต่อ 1 หน้า เพื่อประโยชน์ด้าน SEO และโครงสร้างเนื้อหา
+    </div>
+    <h2>ตัวอย่างกล่องข้อความที่เปลี่ยนหัวข้อได้</h2>
+<div style="display:flex;align-items:center;justify-content:center;margin-bottom:16px;gap:8px;">
+    <input type="text" id="headingText" placeholder="กรอกข้อความที่นี่" style="padding:8px 12px;font-size:1rem;border-radius:6px;border:1px solid #ccc;width:200px;">
+    <select id="headingLevel" style="padding:8px 12px;font-size:1rem;border-radius:6px;border:1px solid #ccc;">
+        <option value="h1">h1</option>
+        <option value="h2">h2</option>
+        <option value="h3">h3</option>
+        <option value="h4">h4</option>
+        <option value="h5">h5</option>
+        <option value="h6">h6</option>
+    </select>
+    <button onclick="showHeading()" style="padding:8px 20px;background:#2d6cdf;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:1rem;">แสดงผล</button>
+</div>
+<div id="headingBox" style="width:100%;max-width:400px;height:80px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;border-radius:12px;margin:0 auto 24px auto;box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+    ตัวอย่างข้อความ
+</div>
+<script>
+    function showHeading() {
+        var text = document.getElementById('headingText').value || 'ตัวอย่างข้อความ';
+        var level = document.getElementById('headingLevel').value;
+        var box = document.getElementById('headingBox');
+        box.innerHTML = `<${level}>${text}</${level}>`;
+    }
+</script>
+</div>

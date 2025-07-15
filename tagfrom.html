@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างการใช้ &lt;form&gt;, &lt;input&gt;, &lt;button&gt;, &lt;label&gt; ใน HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .container { max-width: 650px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { color: #2d6cdf; }
+        pre { background: #f0f0f0; padding: 16px; border-radius: 6px; overflow-x: auto; }
+        .note { color: #555; margin-top: 16px; }
+        .demo { background: #e3eefd; padding: 18px; border-radius: 8px; margin-bottom: 20px; }
+        label { font-weight: bold; color: #1a4fa0; }
+        input[type="text"] { padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 12px; font-size: 1rem; }
+        button { padding: 8px 20px; background: #2d6cdf; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+        button:hover { background: #1a4fa0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>การทำงานของแท็ก &lt;form&gt;, &lt;input&gt;, &lt;button&gt;, &lt;label&gt;</h1>
+        <p>แท็ก <b>&lt;form&gt;</b> ใช้สำหรับสร้างฟอร์มรับข้อมูล<br>
+        <b>&lt;input&gt;</b> ใช้สำหรับรับค่าจากผู้ใช้<br>
+        <b>&lt;button&gt;</b> ใช้สำหรับปุ่มกด<br>
+        <b>&lt;label&gt;</b> ใช้สำหรับป้ายกำกับ input</p>
+        <h2>ตัวอย่างการแสดงผล</h2>
+        <div class="demo">
+            <form onsubmit="showResult(event)">
+                <label for="name">ชื่อ:</label><br>
+                <input type="text" id="name" name="name" placeholder="กรอกชื่อของคุณ"><br>
+                <button type="submit">ส่งข้อมูล</button>
+            </form>
+            <div id="result" style="margin-top:16px;color:#2d6cdf;font-weight:bold;"></div>
+        </div>
+        <h2>ตัวอย่างโค้ด</h2>
+        <div style="display:flex;align-items:center;justify-content:center;margin-bottom:16px;gap:8px;">
+    <span style="color:#2d6cdf;font-weight:bold;">&lt;label&gt;</span>
+    <input type="text" id="labelInput" placeholder="ป้ายกำกับ" value="ชื่อ" style="padding:8px 12px;font-size:1rem;border-radius:6px;border:1px solid #ccc;width:80px;">
+    <span style="color:#2d6cdf;font-weight:bold;">&lt;/label&gt;</span>
+    <span style="color:#2d6cdf;font-weight:bold;">&lt;input&gt;</span>
+    <input type="text" id="inputValue" placeholder="กรอกข้อมูล" style="padding:8px 12px;font-size:1rem;border-radius:6px;border:1px solid #ccc;width:120px;">
+    <span style="color:#2d6cdf;font-weight:bold;">&lt;button&gt;</span>
+    <button onclick="showFormBox()" style="padding:8px 20px;background:#2d6cdf;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:1rem;">ส่ง</button>
+    <span style="color:#2d6cdf;font-weight:bold;">&lt;/button&gt;</span>
+</div>
+<div id="formBox" style="width:100%;max-width:400px;min-height:60px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;border-radius:12px;margin:0 auto 24px auto;box-shadow:0 2px 8px rgba(0,0,0,0.10);padding:12px;">
+    กรุณากรอกข้อมูลแล้วกดส่ง
+</div>
+<script>
+    function showFormBox() {
+        var label = document.getElementById('labelInput').value || 'ชื่อ';
+        var value = document.getElementById('inputValue').value || '';
+        var box = document.getElementById('formBox');
+        box.innerHTML = value ? label + ': ' + value : 'กรุณากรอกข้อมูลแล้วกดส่ง';
+    }
+</script>
+
+<script>
+    const customLabel = document.getElementById('customLabel');
+    const liveLabel = document.getElementById('liveLabel');
+    const liveInput = document.getElementById('liveInput');
+    customLabel.addEventListener('input', function() {
+        liveLabel.textContent = customLabel.value ? customLabel.value + ':' : '';
+    });
+    function showLiveForm() {
+        var label = customLabel.value || 'ชื่อ';
+        var value = liveInput.value.trim();
+        var result = document.getElementById('liveResult');
+        if(value) {
+            result.textContent = `${label}: ${value}`;
+        } else {
+            result.textContent = 'กรุณากรอกข้อมูล';
+        }
+    }
+    function syncInput(val) {
+        liveInput.value = val;
+    }
+</script>
+
+</body>
+</html>

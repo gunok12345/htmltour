@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างการใช้ &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt; ใน HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .container { max-width: 700px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { color: #2d6cdf; }
+        pre { background: #f0f0f0; padding: 16px; border-radius: 6px; overflow-x: auto; }
+        .note { color: #555; margin-top: 16px; }
+        .demo { background: #e3eefd; padding: 18px; border-radius: 8px; margin-bottom: 20px; }
+        table.example { border-collapse: collapse; width: 100%; margin-bottom: 12px; }
+        table.example th, table.example td { border: 1px solid #2d6cdf; padding: 10px 16px; text-align: center; }
+        table.example th { background: #2d6cdf; color: #fff; }
+        table.example tr:nth-child(even) { background: #f5faff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>การทำงานของแท็ก &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</h1>
+        <p>
+            <b>&lt;table&gt;</b> ใช้สำหรับสร้างตาราง<br>
+            <b>&lt;tr&gt;</b> ใช้สำหรับสร้างแถวในตาราง<br>
+            <b>&lt;td&gt;</b> ใช้สำหรับเซลล์ข้อมูล<br>
+            <b>&lt;th&gt;</b> ใช้สำหรับหัวตาราง (table header)
+        </p>
+        <h2>ตัวอย่างการแสดงผล</h2>
+        <div class="demo">
+            <table class="example">
+                <tr>
+                    <th>ชื่อ</th>
+                    <th>อายุ</th>
+                    <th>อีเมล</th>
+                </tr>
+                <tr>
+                    <td>สมชาย</td>
+                    <td>25</td>
+                    <td>somchai@email.com</td>
+                </tr>
+                <tr>
+                    <td>สมหญิง</td>
+                    <td>22</td>
+                    <td>somying@email.com</td>
+                </tr>
+            </table>
+        </div>
+        <h2>ตัวอย่างโค้ด</h2>
+        <pre>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;ชื่อ&lt;/th&gt;
+    &lt;th&gt;อายุ&lt;/th&gt;
+    &lt;th&gt;อีเมล&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;สมชาย&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+    &lt;td&gt;somchai@email.com&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;สมหญิง&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+    &lt;td&gt;somying@email.com&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+        <div class="note">
+            <b>หมายเหตุ:</b> สามารถตกแต่งตารางด้วย CSS ได้ตามต้องการ
+        </div>
+    </div>
+</body>
+</html>

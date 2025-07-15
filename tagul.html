@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างการใช้ &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; ใน HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .container { max-width: 650px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { color: #2d6cdf; }
+        pre { background: #f0f0f0; padding: 16px; border-radius: 6px; overflow-x: auto; }
+        .note { color: #555; margin-top: 16px; }
+        .demo { background: #e3eefd; padding: 18px; border-radius: 8px; margin-bottom: 20px; }
+        ul, ol { margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>การทำงานของแท็ก &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h1>
+        <p>
+            <b>&lt;ul&gt;</b> ใช้สร้างรายการแบบไม่เรียงลำดับ (จุดนำหน้า)<br>
+            <b>&lt;ol&gt;</b> ใช้สร้างรายการแบบเรียงลำดับ (ตัวเลขนำหน้า)<br>
+            <b>&lt;li&gt;</b> ใช้สำหรับแต่ละรายการใน &lt;ul&gt; หรือ &lt;ol&gt;
+        </p>
+        <h2>ตัวอย่างการแสดงผล</h2>
+        <div class="demo">
+            <b>รายการแบบไม่เรียงลำดับ (ul):</b>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <b>รายการแบบเรียงลำดับ (ol):</b>
+            <ol>
+                <li>เตรียมไฟล์</li>
+                <li>เขียนโค้ด</li>
+                <li>ทดสอบ</li>
+            </ol>
+        </div>
+        <h2>ตัวอย่างโค้ด</h2>
+        <pre>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;เตรียมไฟล์&lt;/li&gt;
+  &lt;li&gt;เขียนโค้ด&lt;/li&gt;
+  &lt;li&gt;ทดสอบ&lt;/li&gt;
+&lt;/ol&gt;
+        </pre>
+        <div class="note">
+            <b>หมายเหตุ:</b> สามารถซ้อน &lt;ul&gt; หรือ &lt;ol&gt; ได้หลายระดับเพื่อสร้างรายการย่อย
+        </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:16px;gap:8px;">
+    <select id="listType" style="padding:8px 12px;font-size:1rem;border-radius:6px;border:1px solid #ccc;">
+        <option value="ul">&lt;ul&gt;</option>
+        <option value="ol">&lt;ol&gt;</option>
+    </select>
+    <input type="text" id="listInput" placeholder="รายการคั่นด้วย ," style="padding:8px 12px;font-size:1rem;border-radius:6px;border:1px solid #ccc;width:220px;">
+    <span style="color:#2d6cdf;font-weight:bold;margin-left:8px;">&lt;/ul&gt; หรือ &lt;/ol&gt;</span>
+</div>
+<button onclick="showList()" style="display:block;margin:0 auto 16px auto;padding:8px 20px;background:#2d6cdf;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:1rem;">แสดงรายการ</button>
+<div id="listBox" style="width:100%;max-width:400px;min-height:60px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;border-radius:12px;margin:0 auto 24px auto;box-shadow:0 2px 8px rgba(0,0,0,0.10);padding:12px;">
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</div>
+<script>
+    function showList() {
+        var type = document.getElementById('listType').value;
+        var items = document.getElementById('listInput').value.split(',').map(s => s.trim()).filter(Boolean);
+        if (items.length === 0) items = ['HTML', 'CSS', 'JavaScript'];
+        var html = `<${type}>` + items.map(i => `<li>${i}</li>`).join('') + `</${type}>`;
+        document.getElementById('listBox').innerHTML = html;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างการใช้ &lt;div&gt; ใน HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .container { max-width: 650px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { color: #2d6cdf; }
+        pre { background: #f0f0f0; padding: 16px; border-radius: 6px; overflow-x: auto; }
+        .note { color: #555; margin-top: 16px; }
+        .demo { background: #e3eefd; padding: 18px; border-radius: 8px; margin-bottom: 20px; }
+        .mydiv { background: #2d6cdf; color: #fff; padding: 24px; border-radius: 10px; text-align: center; font-size: 1.3rem; margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>การทำงานของแท็ก &lt;div&gt;</h1>
+        <p>แท็ก <b>&lt;div&gt;</b> ใช้สำหรับแบ่งส่วนหรือกลุ่มเนื้อหาใน HTML สามารถนำไปจัดรูปแบบด้วย CSS ได้อย่างอิสระ</p>
+        <h2>ตัวอย่างการแสดงผล</h2>
+        <div class="demo">
+            <div class="mydiv">นี่คือกล่องที่สร้างด้วย &lt;div&gt; และตกแต่งด้วย CSS</div>
+        </div>
+        <h2>ตัวอย่างโค้ด</h2>
+        <pre>&lt;div style="background:#2d6cdf;color:#fff;padding:24px;border-radius:10px;text-align:center;"&gt;
+    นี่คือกล่องที่สร้างด้วย &lt;div&gt;
+&lt;/div&gt;
+        </pre>
+        <div class="note">
+            <b>หมายเหตุ:</b> &lt;div&gt; ไม่มีผลต่อการแสดงผลโดยตรง แต่ใช้จัดกลุ่มและตกแต่งเนื้อหา
+        </div>
+    </div>
+</body>
+</html>

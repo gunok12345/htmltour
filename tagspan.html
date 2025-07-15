@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างการใช้ &lt;span&gt; ใน HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .container { max-width: 650px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { color: #2d6cdf; }
+        pre { background: #f0f0f0; padding: 16px; border-radius: 6px; overflow-x: auto; }
+        .note { color: #555; margin-top: 16px; }
+        .demo { background: #e3eefd; padding: 18px; border-radius: 8px; margin-bottom: 20px; }
+        .highlight { color: #fff; background: #e67e22; padding: 2px 8px; border-radius: 6px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>การทำงานของแท็ก &lt;span&gt;</h1>
+        <p>แท็ก <b>&lt;span&gt;</b> ใช้สำหรับเน้นหรือจัดรูปแบบข้อความบางส่วนในบรรทัดเดียวกัน (inline) โดยมักใช้ร่วมกับ CSS</p>
+        <h2>ตัวอย่างการแสดงผล</h2>
+        <div class="demo">
+            ข้อความปกติ <span class="highlight">ข้อความที่เน้นด้วย &lt;span&gt;</span> ข้อความปกติ
+        </div>
+        <h2>ตัวอย่างโค้ด</h2>
+        <pre>ข้อความปกติ &lt;span style="color:#fff;background:#e67e22;padding:2px 8px;border-radius:6px;"&gt;ข้อความที่เน้นด้วย &lt;span&gt;&lt;/span&gt; ข้อความปกติ
+        </pre>
+        <div class="note">
+            <b>หมายเหตุ:</b> &lt;span&gt; ไม่มีผลต่อการแสดงผลโดยตรง แต่ใช้เน้นหรือจัดรูปแบบข้อความเฉพาะส่วน
+        </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:16px;gap:8px;">
+    <span style="color:#2d6cdf;font-weight:bold;margin-right:8px;">ข้อความปกติ</span>
+    <span style="color:#2d6cdf;font-weight:bold;">&lt;span&gt;</span>
+    <input type="text" id="spanInput" placeholder="ข้อความเน้น" style="padding:8px 12px;font-size:1rem;border-radius:6px;border:1px solid #ccc;width:120px;">
+    <span style="color:#2d6cdf;font-weight:bold;">&lt;/span&gt;</span>
+    <span style="color:#2d6cdf;font-weight:bold;margin-left:8px;">ข้อความปกติ</span>
+</div>
+<button onclick="showSpan()" style="display:block;margin:0 auto 16px auto;padding:8px 20px;background:#2d6cdf;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:1rem;">แสดงผล</button>
+<div id="spanBox" style="width:100%;max-width:400px;min-height:60px;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;border-radius:12px;margin:0 auto 24px auto;box-shadow:0 2px 8px rgba(0,0,0,0.10);padding:12px;">
+    ข้อความปกติ <span style="color:#fff;background:#e67e22;padding:2px 8px;border-radius:6px;">ข้อความที่เน้นด้วย &lt;span&gt;</span> ข้อความปกติ
+</div>
+<script>
+    function showSpan() {
+        var text = document.getElementById('spanInput').value || 'ข้อความที่เน้นด้วย <span>';
+        var box = document.getElementById('spanBox');
+        box.innerHTML = 'ข้อความปกติ <span style="color:#fff;background:#e67e22;padding:2px 8px;border-radius:6px;">' + text + '</span> ข้อความปกติ';
+    }
+</script>
+</body>
+</html>

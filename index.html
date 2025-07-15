@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บสอน HTML อย่างง่าย</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .container { max-width: 700px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { color: #2d6cdf; }
+        h2 { color: #1a4fa0; margin-top: 32px; }
+        p { color: #333; }
+        pre { background: #f0f0f0; padding: 16px; border-radius: 6px; overflow-x: auto; }
+        img { display: block; margin: 24px auto; max-width: 100%; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+        .btn { display: inline-block; padding: 10px 20px; background: #2d6cdf; color: #fff; border: none; border-radius: 4px; text-decoration: none; cursor: pointer; }
+        .btn:hover { background: #1a4fa0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>สอน HTML อย่างง่าย</h1>
+        <p>HTML (HyperText Markup Language) คือ ภาษาหลักสำหรับสร้างเว็บไซต์<br>โครงสร้างพื้นฐานของ HTML มีดังนี้</p>
+        <h2>ตัวอย่างโครงสร้าง HTML</h2>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;ชื่อเว็บของคุณ&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;สวัสดี HTML!&lt;/h1&gt;
+    &lt;p&gt;นี่คือตัวอย่างย่อหน้า&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <h2>องค์ประกอบสำคัญ</h2>
+        <ul>
+            <li><b>&lt;html&gt;</b> : ครอบทั้งหมดของหน้าเว็บ</li>
+            <li><b>&lt;head&gt;</b> : ส่วนหัว (ข้อมูล meta, title, link)</li>
+            <li><b>&lt;body&gt;</b> : เนื้อหาหลักที่แสดงบนเว็บ</li>
+        </ul>
+        <h2>ลองแก้ไขและทดลองเอง!</h2>
+        <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro" class="btn" target="_blank">ทดลอง HTML ออนไลน์</a>
+        <h2>แท็ก HTML พื้นฐานที่ควรรู้</h2>
+<table style="width:100%;border-collapse:collapse;margin:24px 0;">
+    <thead>
+        <tr style="background:#e3eefd;">
+            <th style="border:1px solid #ccc;padding:8px;">Tag</th>
+            <th style="border:1px solid #ccc;padding:8px;">คำอธิบาย</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td style="border:1px solid #ccc;padding:8px;"><a href="#">&lt;!DOCTYPE&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ประกาศชนิดเอกสาร HTML</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="#">&lt;html&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ครอบทั้งหมดของหน้าเว็บ</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="#">&lt;head&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ส่วนหัว (meta, title, link, script)</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="title.html">&lt;title&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ชื่อเรื่องของเว็บ</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="#">&lt;meta&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ข้อมูล meta เช่น charset, viewport</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="#">&lt;link&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">เชื่อมโยงไฟล์ภายนอก เช่น CSS</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="#">&lt;body&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">เนื้อหาหลักของเว็บ</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="heading.html">&lt;h1&gt; - &lt;h6&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">หัวข้อ (ขนาดใหญ่ไปเล็ก)</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="palagaf.html">&lt;p&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ย่อหน้า</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="taga.html">&lt;a&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ลิงก์</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="tagimg.html">&lt;img&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">แทรกรูปภาพ</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="tagul.html">&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">รายการ (ไม่เรียง/เรียงลำดับ)</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="tagtable.html">&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ตาราง</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="tagdiv.html">&lt;div&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">กล่องแบ่งส่วน</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="tagspan.html">&lt;span&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">กล่องอินไลน์</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="tagbr.html">&lt;br&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ขึ้นบรรทัดใหม่</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="taghr.html">&lt;hr&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">เส้นคั่น</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="tagfrom.html">&lt;form&gt;, &lt;input&gt;, &lt;button&gt;, &lt;label&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ฟอร์มและปุ่ม</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="#">&lt;script&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ฝัง JavaScript</td></tr>
+<tr><td style="border:1px solid #ccc;padding:8px;"><a href="#">&lt;style&gt;</a></td><td style="border:1px solid #ccc;padding:8px;">ฝัง CSS</td></tr>
+    </tbody>
+</table>
+    </div>
+
+    
+</body>
+</html>
